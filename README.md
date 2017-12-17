@@ -25,6 +25,10 @@
     * One of the h2 implementations is JdbcDataSource (which doesn't support pooling or distri transactions)
 * Chapter 4
   * Spring introduces the concept of PlatformTransactionManager
+  * Learned something new
+````java
+@ContextConfiguration(classes = MySpringConfig.class)
+````
 
 ## Errors
 * Error #1
