@@ -1,3 +1,5 @@
+package chapter_03;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 
 // I didn't know you could to this.  Have your Spring configs in another class.
-@ContextConfiguration(classes = DataSourceExercise_Chap03_SpringConfig.class)
+@ContextConfiguration(classes = DataSourceExercise_SpringConfig.class)
 @SuppressWarnings("Duplicates") // for IntelliJ only
 public class DataSourceExercise_Chap03 {
     private static final TransactionDefinition TX_DEFAULTS = null;

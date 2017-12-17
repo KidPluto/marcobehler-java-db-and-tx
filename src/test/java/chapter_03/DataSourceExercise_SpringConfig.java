@@ -1,3 +1,5 @@
+package chapter_03;
+
 import org.h2.jdbcx.JdbcDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +10,7 @@ import javax.sql.DataSource;
 // Needed by, used by, DataSourceExercise_Chap03
 
 @Configuration
-public class DataSourceExercise_Chap03_SpringConfig {
+public class DataSourceExercise_SpringConfig {
 
     @Bean
     public DataSource dataSource() {
