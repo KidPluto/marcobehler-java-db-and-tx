@@ -32,12 +32,15 @@
 @ContextConfiguration(classes = MySpringConfig.class)
 ````
 
-## Chapter 5
+## Chapter 5 Hibernate/JPA
 
 |JPA|Hibernate|
 |---|---|
 |EntityManager|Session|
 |EntityManagerFactory|SessionFactory|
+
+* Not able to get the first example working
+  * The import is not finding org.springframework.orm 
 
 ## Errors
 * Error #1
