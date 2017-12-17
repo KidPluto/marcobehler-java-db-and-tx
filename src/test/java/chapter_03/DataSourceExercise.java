@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 // I didn't know you could to this.  Have your Spring configs in another class.
 @ContextConfiguration(classes = DataSourceExercise_SpringConfig.class)
 @SuppressWarnings("Duplicates") // for IntelliJ only
-public class DataSourceExercise_Chap03 {
+public class DataSourceExercise {
     private static final TransactionDefinition TX_DEFAULTS = null;
 
     @Autowired
