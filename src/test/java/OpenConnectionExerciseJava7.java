@@ -17,7 +17,7 @@ public class OpenConnectionExerciseJava7 {
             // Create the base tables
             conn.createStatement().execute("create table bids (" +
                     "id IDENTITY, " +
-                    "used VARCHAR, " +
+                    "user VARCHAR, " +
                     "time TIMESTAMP, " +
                     "amount NUMBER, " +
                     "currency VARCHAR)");
