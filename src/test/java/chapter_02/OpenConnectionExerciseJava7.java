@@ -1,3 +1,5 @@
+package chapter_02;
+
 import org.junit.Test;
 import java.sql.Connection;
 import java.sql.Driver;

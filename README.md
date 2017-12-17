@@ -16,19 +16,28 @@
 * A database transaction is a collection of SQL queries which forms a logical task.
   * https://www.tutorialspoint.com/sql/sql-transactions.htm
   * Data must be kept consistent.  In the event of a failure the data must remain in the previous state, before the start of a transaction.
-* Chapter 3
+
+## Chapter 3
   * Up to this point we have been using DriverManager.  In most cases you would be using DataSource, which supports the following features:
     * JNDI
     * Connection pooling
     * Distributed transactions
   * datasource is an interface and can have many different implementations
     * One of the h2 implementations is JdbcDataSource (which doesn't support pooling or distri transactions)
-* Chapter 4
+
+## Chapter 4
   * Spring introduces the concept of PlatformTransactionManager
   * Learned something new
 ````java
 @ContextConfiguration(classes = MySpringConfig.class)
 ````
+
+## Chapter 5
+
+|JPA|Hibernate|
+|---|---|
+|EntityManager|Session|
+|EntityManagerFactory|SessionFactory|
 
 ## Errors
 * Error #1

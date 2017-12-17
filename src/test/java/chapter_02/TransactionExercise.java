@@ -1,16 +1,15 @@
+package chapter_02;
+
 import org.junit.Before;
+import org.junit.After;
 import org.junit.Test;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
-
-public class RollbackExercise {
-
+public class TransactionExercise {
     @Before
     public void setUp() {
         try (Connection connection = getConnection()) {
@@ -18,26 +17,16 @@ public class RollbackExercise {
         } catch (SQLException  e) {e.printStackTrace();}
     }
     @Test
-    public void rollback_exercise() throws SQLException {
-        try (Connection connection = getConnection()) {
+    public void transaction_exercise() {
+        try (Connection connection=getConnection()) {
+            System.out.println("Opening a jdbc transaction...");
             connection.setAutoCommit(false);
             connection.createStatement().execute("insert into items (name) values ('Windows 10 Premium Edition')");
             connection.createStatement().execute("insert into bids (user, time, amount, currency) values ('Hans', now(), 1, 'EUR')");
             connection.createStatement().execute("insert into bids (user, time, amount, currency) values ('Franz', now(), 2, 'EUR')");
-            // Never mind, lets undo that.
-            connection.rollback();
-            System.out.println("Ok, did a rollback");
-            //
-            assertThat(getItemsCount(connection), equalTo(0));
-        }
-    }
-    private int getItemsCount (Connection connection) throws SQLException {
-        ResultSet resultSet = connection.createStatement().executeQuery("select count(*) as count from items");
-        resultSet.next();
-        int count = resultSet.getInt("count");
-        System.out.println("Number of items in the items table: " + count);
-        resultSet.close();
-        return count;
+            connection.commit();
+            System.out.println("Commit worked!");
+        } catch (SQLException e) {e.printStackTrace();}
     }
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection("jdbc:h2:mem:exercise_db;DB_CLOSE_DELAY=-1");

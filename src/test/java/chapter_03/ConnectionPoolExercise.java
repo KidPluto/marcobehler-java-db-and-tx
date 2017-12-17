@@ -1,3 +1,5 @@
+package chapter_03;
+
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.h2.jdbcx.JdbcDataSource;

@@ -103,6 +103,13 @@
             <version>4.2.0.RELEASE</version>
         </dependency>
 
+        <!-- For Chapter 5 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+
     </dependencies>
 
 
