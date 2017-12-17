@@ -45,5 +45,6 @@ public class DataSourceExercise {
 
         // Commit, and close
         txManager.commit(transaction);
+        System.out.println("Commit and closed.");
     }
 }
