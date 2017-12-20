@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+
 //import org.springframework.transaction.PlatformTransactionManager;
 //import javax.persistence.*;
 //import javax.sql.DataSource;
